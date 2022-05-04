@@ -1,0 +1,18 @@
+body {
+    background-color: #fafafa;
+    margin: 0;
+
+}
+nav {
+    background-color: #fff;
+    height: 2.5cm;
+    line-height: 3cm;
+    padding: 0 6cm;
+    border-bottom: 0.1px solid beige;
+}
+.logo{
+    text-decoration: none;
+}
+.logo{
+    vertical-align: middle;
+}
