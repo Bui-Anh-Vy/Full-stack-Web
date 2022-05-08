@@ -1,6 +1,11 @@
 const Gallery = () =>
     `
-    <i class="fa-solid fa-plus"></i>
+    <input type="file" name="photo" id="addPhotoInput">
+    <label for="addPhotoInput">
+    <div class="post">
+        <p class="text">POST</p>
+    </div>
+    <i class="add-photo fa-solid fa-plus"></i>
     <div class="gallery-nav"></div>
     <section class="gallery">
         <a href="#" class="item">
