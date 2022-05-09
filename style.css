@@ -6,7 +6,7 @@ nav {
     background-color: #fff;
     height: 2cm;
     line-height: 2cm;
-    padding: 0 6cm;
+    padding: 0 4cm;
     border-bottom: 0.1px solid beige;
 }
 .logo{
@@ -22,7 +22,7 @@ img {
 }
 .search {
     background: #f2f2f2;
-    margin-left: 7cm;
+    margin-left: 4.5cm;
     height: 0.8cm;
     width: 6cm;
     border: 1px solid #dbdbdb;
@@ -35,7 +35,7 @@ img {
     color: #dbdbdb;
 }
 .nav-links {
-    margin-left: 7cm;
+    margin-left: 5cm;
 
 }
 .nav-links>a {
@@ -48,11 +48,10 @@ img {
     fill: #262626;
 }
 .container {
-    height: 2;
+    height: 5;
     padding:  0% 20%;
 }
-.bio {
-    display: grid;
+.bio {    display: grid;
     grid-template-columns: 15fr 9.8cm;
     height: 4cm;
     padding: 7%;
@@ -96,15 +95,15 @@ img {
 .add-photo {
     transform: scale(2);
     position: absolute;
-    bottom: 9.7cm;
-    right: 25cm;
+    bottom: 6.5cm;
+    right: 22cm;
     cursor: pointer;
 }
 
 .post .text {
     font-size: 20px;
     line-height: 0cm;
-    margin-left: 8.5cm;
+    margin-left: 5cm;
     color: #262626;
     padding: 5px 10px 0px;
     text-transform: uppercase;
@@ -136,4 +135,22 @@ img {
 .item>img:hover {
     opacity: 0.7;
     
+}
+
+#addImageInput {
+    display: none;
+}
+
+.footer {
+    background: #fff;
+    color: #fff;
+    display: grid;
+}
+
+.footer div {
+    text-align: center;
+}
+.code1 a {
+    margin-left: 0.6cm;
+    color: #646363;
 }
