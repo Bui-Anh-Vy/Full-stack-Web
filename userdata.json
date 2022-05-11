@@ -1,0 +1,18 @@
+[
+    {
+        "user_id": "test1",
+        "password": "1234",
+        "retype_passowrd": "1234",
+        "email": "dsada@gmail.com",
+        "first_name": "Khoi",
+        "last_name": "Nguyen"
+    },
+    {
+        "user_id": "test2",
+        "password": "test2",
+        "retype_passowrd": "test2",
+        "email": "dasd@gmail.com",
+        "first_name": "Khoi",
+        "last_name": "Nguyen"
+    }
+]
