@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Help page </title>
-    <link rel="stylesheet" href="/footer/help.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <?php include('../modules/navbar.php'); ?>
