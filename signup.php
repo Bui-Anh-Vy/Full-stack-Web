@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$last_name = trim($last_name);
 	}
 
-
 	$inputEmail = trim($_POST["email"]);
 
 	if (empty($inputEmail)) {
@@ -91,12 +90,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			if ($_FILES["picture"]["size"] > $maxfilesize) {
 				$file_err = "File is too large.";
-			} elseif (!in_array($imageFileType, $allowtypes) || !(getimagesize($_FILES["picture"]["tmp_name"]) !== false)) {
+			} elseif (
+				!in_array($imageFileType, $allowtypes)
+				|| !(getimagesize($_FILES["picture"]["tmp_name"]) !== false)
+			) {
 				$file_err = "Not an image file";
-			} else {
-				if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
-					$file_err = "File upload failed";
-				}
+			} elseif (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
+				$file_err = "File upload failed";
 			}
 		}
 	}
@@ -122,6 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			"picture" => $target_file,
 			"first_name" => $first_name,
 			"last_name" => $last_name,
+			"images" => array()
 		);
 
 		array_push($users, $new_user);
@@ -158,6 +159,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			padding: 20px;
 		}
 	</style>
+	<script src="cookie-consent.js"></script>
+
 
 	<script>
 		function isValidatedPassword() {
@@ -175,29 +178,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			}
 		}
 
-		window.onload =  () => {
+		window.onload = () => {
 			document.getElementById("repass").addEventListener("keyup", isValidatedPassword);
 		}
 	</script>
-
+	<link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6af0088ad.js" crossorigin="anonymous"></script>
+	<script src="cookie-consent.js"></script>
 </head>
 
 <body>
-	<div class="wrapper">
-		<h2>Sign Up</h2>
-		<p>Please fill this form to create an account.</p>
+	<?php include('./modules/navbar.php') ?>
 
-		<?php
-		if (isset($success)) {
-			echo
-			'<div class="alert alert-success" role="alert">
-							<i class="bi bi-check-circle"></i>
-							New account created successfully.
-			  		</div>';
-		}
-		?>
-
+	<div class="wrapper centered">
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+			<h2>Sign Up</h2>
+			<p>Please fill this form to create an account.</p>
+
+			<?php
+			if (isset($success)) {
+				echo
+				'<div class="alert alert-success" role="alert">
+								<i class="bi bi-check-circle"></i>
+								New account created successfully.
+						</div>';
+			}
+			?>
 			<div class="form-group">
 				<label>First Name:</label>
 				<input type="text" name="first_name" class="form-control <?php echo (!empty($first_name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo isset($first_name) ? $first_name : '' ?>">
@@ -227,7 +233,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 			<div class="form-group">
 				<label>Profile Picture:</label>
-				<input type="file" name="picture" class="form-control <?php echo (!empty($file_err)) ? 'is-invalid' : ''; ?>" >
+				<input type="file" name="picture" class="form-control <?php echo (!empty($file_err)) ? 'is-invalid' : ''; ?>">
 				<span class="invalid-feedback"><?php echo $file_err; ?></span>
 			</div>
 
@@ -238,6 +244,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<p>Already have an account? <a href="login.php">Login here</a>.</p>
 		</form>
 	</div>
+	<?php include('./modules/footer.php') ?>
+
 </body>
 
 </html>
