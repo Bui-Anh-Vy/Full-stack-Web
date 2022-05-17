@@ -19,7 +19,7 @@
                     <div class="container">
                         <h2>Bui Anh Vy</h2>
                         <p class="title">UI </p>
-                        <p>text</p>
+                        <p>front end</p>
                         <p>s3891641@rmit.edu.vn</p>
                     </div>
                 </div>
@@ -29,10 +29,10 @@
                 <div class="card">
                     <img src="./download(3).jpg" alt="Phaxt" style="width: 100%">
                     <div class="container">
-                        <h2>Phaxt Tran</h2>
+                        <h2>Phat Tran</h2>
                         <p class="title">Cookies </p>
-                        <p>text</p>
-                        <p>s*******@rmit.edu.vn</p>
+                        <p>back end</p>
+                        <p>s3836612@rmit.edu.vn</p>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@
                     <div class="container">
                         <h2>Kha Vo Nguyen Nhat</h2>
                         <p class="title">Images </p>
-                        <p>text</p>
-                        <p>s******@rmit.edu.vn</p>
+                        <p>back end</p>
+                        <p>s3924422@rmit.edu.vn</p>
                     </div>
                 </div>
             </div>
@@ -54,9 +54,9 @@
                     <img src="./download(2).jpg" alt="Kian" style="width: 100%">
                     <div class="container">
                         <h2>Kian Nguyen</h2>
-                        <p class="title">Logged in/out </p>
-                        <p>text</p>
-                        <p>s*******@rmit.edu.vn</p>
+                        <p class="title">Sign-up system </p>
+                        <p>back end</p>
+                        <p>s3880212@rmit.edu.vn</p>
                     </div>
                 </div>
             </div>
